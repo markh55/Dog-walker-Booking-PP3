@@ -12,7 +12,6 @@ class Walk(models.Model):
     date = models.DateField()
     time_of_day = models.CharField(max_length=10, choices=TIME_CHOICES)
     number_of_dogs = models.PositiveSmallIntegerField()
-    dog_owner_name = models.CharField(max_length=100)
     address = models.CharField(max_length=200)
     phone_number = models.CharField(max_length=20)
     notes = models.TextField(blank=True)
