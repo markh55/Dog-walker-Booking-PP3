@@ -23,3 +23,25 @@ class Walk(models.Model):
 
     def __str__(self):
         return f"Walk on {self.date} with {self.number_of_dogs} dog(s)"
+    
+class Booking(models.Model):
+    SIZE_CHOICES = [
+        ('SMALL', 'Small (0–7 kg)'),
+        ('MEDIUM', 'Medium (8–18 kg)'),
+        ('LARGE', 'Large (19–45 kg)'),
+        ('XL', 'Extra Large (46+ kg)'),
+]
+    walk = models.OneToOneField(Walk, on_delete=models.CASCADE, related_name='bookings')
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+
+    dog_size = models.CharField(max_length=6, choices=SIZE_CHOICES)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ['walk', 'owner']  # Prevent owner from booking same walk twice
+
+   
+    def __str__(self):
+        return f"{self.owner.get_full_name()} booked a {self.dog_size.lower()} dog for {self.walk}"
