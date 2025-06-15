@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+# from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -42,12 +43,12 @@ class Booking(models.Model):
     def __str__(self):
         return f"{self.owner.get_full_name()} booked a {self.dog_size.lower()} dog for {self.walk}" 
     
-    class Review(models.Model):
-        reviewer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reviews_written')
-        walk = models.ForeignKey(Walk, on_delete=models.CASCADE, related_name='reviews')
-        rating = models.PositiveSmallIntegerField(choices=[(i, i) for i in range(1, 6)])
-        comment = models.TextField(blank=True)
-        created_at = models.DateTimeField(auto_now_add=True)
+class Review(models.Model):
+    reviewer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reviews_written')
+    walk = models.ForeignKey(Walk, on_delete=models.CASCADE, related_name='reviews')
+    rating = models.PositiveSmallIntegerField(choices=[(i, i) for i in range(1, 6)])
+    comment = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.rating}★ by {self.reviewer}"
