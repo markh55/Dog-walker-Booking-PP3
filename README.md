@@ -4,8 +4,9 @@ The aim of this project is to build a booking system where people can book a dog
 
 ## Table of Content
 
-1. [Planning](#planning)
+* [Planning](#planning)
      * [User Stories](#user-stories)
+*  [Resources](#resources)
 
 
 ## Planning
@@ -28,5 +29,17 @@ The aim of this project is to build a booking system where people can book a dog
   * Receiving Feedback
 
      - As a dog walker, I want to receive reviews from pet owners after walks so I can build my reputation and improve my service.
+   
+
+
+## Resources
+
+* Django 5 By Example Fifth Edition - By Antonio Mele < packt >
+* Code Institute
+   - Love Sandwiches
+   - I Think Therefore I Blog
+* Django Project Site
+  
+
 
 
