@@ -14,21 +14,21 @@ The aim of this project is to build a booking system where people can book a dog
 ### User Stories
 
   * Booking a Walk.
-     - As a Pet Owner, I want to be able to book a dog walker for a specific day and time.
+     - As a Pet Owner - I want to be able to book a dog walker for a specific day and time.
 
   * Available Walks.
-     - As a Pet Owner, I want to be able to see abvailable walks that can be book e.g. Morning / Afternoon.
+     - As a Pet Owner - I want to be able to see abvailable walks that can be book e.g. Morning / Afternoon.
    
   * Leaving a Review.
-     - As a Pet Owner, I would like to be able to rate and review the walk.
+     - As a Pet Owner - I would like to be able to rate and review the walk.
    
   * Viewing Upcoming Bookings
 
-     - As a dog walker, I want to see all my upcoming walks and which pet owners have booked them so I can plan my schedule.
+     - As a dog walker - I want to see all my upcoming walks and which pet owners have booked them so I can plan my schedule.
 
   * Receiving Feedback
 
-     - As a dog walker, I want to receive reviews from pet owners after walks so I can build my reputation and improve my service.
+     - As a dog walker - I want to receive reviews from pet owners after walks so I can build my reputation and improve my service.
    
 
 
