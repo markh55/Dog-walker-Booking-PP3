@@ -17,15 +17,15 @@ class Walk(models.Model):
     address = models.CharField(max_length=200)
     phone_number = models.CharField(max_length=20)
     notes = models.TextField(blank=True)
-    
+
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         unique_together = ['walker', 'date', 'time_of_day'] # No double bookings for the walker at the same time & date
 
     def __str__(self):
-        return f"Walk on {self.date} with {self.number_of_dogs} dog(s)"    
-    
+        return f"Walk on {self.date} with {self.number_of_dogs} dog(s)"
+
 class Booking(models.Model):
     SIZE_CHOICES = [ # Dog size options
         ('SMALL', 'Small (0–7 kg)'),
@@ -43,8 +43,8 @@ class Booking(models.Model):
         unique_together = ['walk', 'owner']  # Prevent owner from booking same walk twice
 
     def __str__(self):
-        return f"{self.owner.get_full_name()} booked a {self.dog_size.lower()} dog for {self.walk}" 
-    
+        return f"{self.owner.get_full_name()} booked a {self.dog_size.lower()} dog for {self.walk}"
+
 class Review(models.Model):
     reviewer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reviews_written')
     walk = models.ForeignKey(Walk, on_delete=models.CASCADE, related_name='reviews')
