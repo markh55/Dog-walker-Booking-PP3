@@ -6,7 +6,9 @@ The aim of this project is to build a booking system where people can book a dog
 
 * [Planning](#planning)
      * [User Stories](#user-stories)
-*  [Resources](#resources)
+* [Deployment](#deployment)
+     * [Git Hub](#github)
+* [Resources](#resources)
 
 
 ## Planning
@@ -30,6 +32,33 @@ The aim of this project is to build a booking system where people can book a dog
 
      - As a dog walker - I want to receive reviews from pet owners after walks so I can build my reputation and improve my service.
    
+
+## Deployment
+
+### GitHub
+
+Repository
+I made a public local repository on my Github account, I then linked my repository to my VSCode account and started building. When writing my code I ensured that I committed my changes to the repository using clear and direct messages for any changes,this is done by doing the following in the terminal;
+
+git add .
+git commit -m “Enter message here”
+git push
+I would send a commit after each change then I would push the file once i made 3 or 4 changes.
+
+Hosting
+This is how I hosted my website: On Github I Selected my Dog-Walker-Booking-PP3 Repository, then go to;
+
+Settings
+Pages
+Once on the pages site I would ensure the following settings were applied; Source would need to be set to ‘Deploy from branch’ Branch will need to be set to main and then root. Save.
+
+<img width="1655" alt="Screenshot 2025-06-23 at 12 47 47" src="https://github.com/user-attachments/assets/ad2d1c37-9b12-488f-bc26-0aafd5f9c694" />
+
+
+<img width="1661" alt="Screenshot 2025-06-23 at 12 48 32" src="https://github.com/user-attachments/assets/dbc7de5f-f846-48cb-bff2-fd9848219e65" />
+
+
+
 
 
 ## Resources
