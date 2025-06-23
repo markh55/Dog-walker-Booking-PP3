@@ -61,6 +61,35 @@ Once on the pages site I would ensure the following settings were applied; Sourc
 
 ### Heroku
 
+Deploying my project on Heroku I first created a new app by clicking the "New" button in the top right to get a dropdown menu with the following choice
+* Create new app
+* Create new pipline
+
+I clicked "Create new app"
+
+<img width="1658" alt="Screenshot 2025-06-23 at 13 04 18" src="https://github.com/user-attachments/assets/77f25958-d873-4f05-800d-9229f3f63ffe" />
+
+Once ive clicked "Create new app" i would then need to name my app "dog-walker-booking-pp3" all in lowercase or an error will occur, once this is done i then selected my location
+
+<img width="1658" alt="Screenshot 2025-06-23 at 13 04 45" src="https://github.com/user-attachments/assets/cebfe6ea-f457-47cc-b686-fecb792daf62" />
+
+I then navigated to the "deploy" section to connect my GitHub repository to Heroku i would do this by;
+* Selecting github as my deployment method.
+* Then once conected i would search for my project by typing in "dog".
+* Once ive search my github i would select the project i would like to link to Heroku.
+
+<img width="1657" alt="Screenshot 2025-06-23 at 13 05 36" src="https://github.com/user-attachments/assets/0d28dbd8-dc25-4609-8966-7353dc473ff5" />
+
+Once all the above have been completed i would then process a Manual deployment and i would need to repeat this process after i made any changed within my source code  
+<img width="1798" alt="Screenshot 2025-06-23 at 13 07 05" src="https://github.com/user-attachments/assets/e211c7da-eb4c-486e-b735-4cb6f1f363ed" />
+
+To complete the deployment of my app i updated the ALLOWED_HOSTS in the settings.py file by adding
+ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
+
+<img width="371" alt="Screenshot 2025-06-23 at 13 08 24" src="https://github.com/user-attachments/assets/b7a6b0ed-c26d-4d79-a855-3c562d955a08" />
+
+This tells Django to accept any requests made by Heroku. The 127.0.0.1 allows the app to run without any errors as without this Django will block any requests and throw up a "400 Bad Request error".
+
 
 
 ## Resources
