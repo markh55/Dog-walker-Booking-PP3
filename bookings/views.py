@@ -4,6 +4,9 @@ from .models import Booking
 
 # Create your views here.
 
+def home_view(request):
+    return render(request, 'home.html')
+
 def booking_list(request):
     bookings = Booking.objects.all()
     return render(request, 'bookings/booking_list.html', {'bookings': bookings})
