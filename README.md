@@ -10,6 +10,7 @@ The aim of this project is to build a booking system where people can book a dog
      * [Git Hub](#github)
      * [Heroku](#heroku)
 * [Resources](#resources)
+* [Credits](#credits)
 
 
 ## Planning
@@ -100,6 +101,7 @@ This tells Django to accept any requests made by Heroku. The 127.0.0.1 allows th
    - I Think Therefore I Blog
 * Django Project Site
   
-
+## Credits
+ * Bootstrap for navbar layout
 
 
