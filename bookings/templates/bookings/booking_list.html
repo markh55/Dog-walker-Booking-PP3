@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Booking List{% endblock %}
+
+{% block content %}
+<h1>All Bookings</h1>
+<ul>
+{% for booking in bookings %}
+    <li>{{ booking.owner }} booked a {{ booking.dog_size }} dog for walk on {{ booking.walk }}</li>
+{% empty %}
+    <li>No bookings found.</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'booking-create' %}">Create a new booking</a>
+{% endblock %}
