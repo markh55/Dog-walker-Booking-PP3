@@ -6,6 +6,7 @@ The aim of this project is to build a booking system where people can book a dog
 
 * [Planning](#planning)
      * [User Stories](#user-stories)
+     * [UI](#ui)
 * [Deployment](#deployment)
      * [Git Hub](#github)
      * [Heroku](#heroku)
@@ -34,6 +35,12 @@ The aim of this project is to build a booking system where people can book a dog
 
      - As a dog walker - I want to receive reviews from pet owners after walks so I can build my reputation and improve my service.
    
+## UI
+
+### Home Page
+![Home Page](https://github.com/user-attachments/assets/40a5f44f-4c6a-4c3e-aa01-3f514c805234)
+ 
+
 
 ## Deployment
 
