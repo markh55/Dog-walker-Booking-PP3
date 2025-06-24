@@ -1,13 +1,39 @@
+{% load static %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Dog Walker Near You{% endblock %}</title>
-    {% load static %}
     <link rel="stylesheet" href="{% static 'bookings/css/booking.css' %}">
 </head>
 <body>
     {% block content %}
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{{ logout_url }}">Logout</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{{ signup_url }}">Register</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+
+
+    <p>Login URL: {{ login_url }}</p>
+    <p>Signup URL: {{ signup_url }}</p>
+    <p>Logout URL: {{ logout_url }}</p>
+
     {% endblock %}
 </body>
 </html>
