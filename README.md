@@ -40,6 +40,8 @@ The aim of this project is to build a booking system where people can book a dog
 ### Home Page
 ![Home Page](https://github.com/user-attachments/assets/40a5f44f-4c6a-4c3e-aa01-3f514c805234)
  
+### Home Page when logged in
+![Home Page when logged in](https://github.com/user-attachments/assets/1268d2cb-2039-4cf3-b10b-b2892d32bf7c)
 
 
 ## Deployment
