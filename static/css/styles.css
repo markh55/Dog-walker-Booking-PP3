@@ -43,3 +43,12 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+
+.card-body {
+  text-align: center;
+  padding: 1rem;
+}
+
+.flex-container, .navbar-custom {
+  background-color: beige;
+}
