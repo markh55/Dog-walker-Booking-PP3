@@ -23,7 +23,22 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('bookings/', include('bookings.urls')),
     path('', bookings_views.home_view, name='home'),
-    path('google6cC0gzeNqpXBJv51P3XsFicX5dp3y-gFP6o1kYiEqXU.html', bookings_views.google_verification),
 
 
 ]
+
+from django.views.static import serve
+from django.conf import settings
+import os
+
+urlpatterns += [
+    path(
+        "google6cC0gzeNqpXBJv51P3XsFicX5dp3y-gFP6o1kYiEqXU.html",
+        serve,
+        {
+            "path": "google6cC0gzeNqpXBJv51P3XsFicX5dp3y-gFP6o1kYiEqXU.html",
+            "document_root": os.path.join(settings.BASE_DIR, "static"),
+        },
+    ),
+]
+
