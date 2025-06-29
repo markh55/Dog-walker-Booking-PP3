@@ -92,7 +92,7 @@ button:hover,
   border: 2px solid white;
 }
 
-.auth-box {
+.auth-box, .booking, .log-out {
   max-width: 408px;
   margin: 0 auto;
   padding: 20px;
