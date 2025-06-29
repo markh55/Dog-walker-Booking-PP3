@@ -67,7 +67,10 @@ ROOT_URLCONF = 'dogwalkerbooking.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'dogwalkerbooking' / 'templates'],  # Directory for custom templates
+        'DIRS': [
+            BASE_DIR / 'templates',
+            BASE_DIR / 'dogwalkerbooking' / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
