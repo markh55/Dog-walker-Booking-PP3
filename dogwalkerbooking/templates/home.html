@@ -15,7 +15,7 @@
     <div class="centered-navbar">
       <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Book a Walker</a>
+          <a class="navbar-brand" href="#top">Book a Walker</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -23,10 +23,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">About Me</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="#aboutme">About Me</a></li>
+              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
               {% if user.is_authenticated %}
                 <a href="{% url 'booking-create' %}" class="btn btn-outline-success">Book a Walk</a>
               {% else %}
@@ -45,7 +44,7 @@
       </nav>
     </div>
 
-    <div class="aboutme">
+    <div id="aboutme" class="aboutme">
       <h3 class="mb-3">About Me</h3>
       <p class="mb-3">
         Life gets busy, and sometimes finding time to walk your dog can be tough. That’s where I come in! I’m here to help make sure your furry friend gets the exercise and fresh air they need — even when your schedule is packed.
@@ -58,7 +57,7 @@
       </p>
     </div>
 
-<div class="services">
+<div id="services" class="services">
 <h3 class="mb-3">Services</h3>
   <div class="row g-3">
     <div class="col-md-3 col-sm-6">
@@ -96,7 +95,7 @@
   </div>
 </div>
 
-<div class="gallery">
+<div id="gallery" class="gallery">
   <h3 class="mb-3">Gallery</h3>
   <div class="gallery-grid">
   <img src="{% static 'images/dog2.jpeg' %}" alt="">
