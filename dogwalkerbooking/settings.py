@@ -24,7 +24,7 @@ import os
 SECRET_KEY = os.environ.get('SECRET_KEY', 'insecure-default-dev-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG =True
 
 ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
 
@@ -161,6 +161,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',  # Default backend
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 SOCIALACCOUNT_PROVIDERS = {}
