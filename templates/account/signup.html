@@ -14,34 +14,42 @@
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
 
-    <p>
-      {{ form.username.label_tag }}
-      {{ form.username }}
-      {{ form.username.errors }}
-    </p>
+  <p>
+    {{ form.username.label_tag }}
+    {{ form.username }}
+    {{ form.username.errors }}
+  </p>
 
-    <p>
-      {{ form.email.label_tag }}
-      {{ form.email }}
-      {{ form.email.errors }}
-    </p>
+  <p>
+    {{ form.email.label_tag }}
+    {{ form.email }}
+    {{ form.email.errors }}
+  </p>
 
-    <p>
-      {{ form.password1.label_tag }}
-      {{ form.password1 }}
-      {{ form.password1.errors }}
-    </p>
+  <p>
+    {{ form.password1.label_tag }}
+    {{ form.password1 }}
+    {{ form.password1.errors }}
+  </p>
 
-    <p>
-      {{ form.password2.label_tag }}
-      {{ form.password2 }}
-      {{ form.password2.errors }}
-    </p>
+  <p>
+    {{ form.password2.label_tag }}
+    {{ form.password2 }}
+    {{ form.password2.errors }}
+  </p>
 
-    {% if form.password1.help_text %}
-    <ul class="helptext">
-      {{ form.password1.help_text|safe }}
-    </ul>
-    {% endif %}
+  {% if form.password1.help_text %}
+  <ul class="helptext">
+    {{ form.password1.help_text|safe }}
+  </ul>
+  {% endif %}
 
-    {% endblock %}
+  <div class="button-group">
+  <button type="submit">Sign Up</button>
+  <a href="{% url 'home' %}" class="cancel-button">Cancel</a>
+  </div>
+
+</form>
+</div>
+
+{% endblock %}

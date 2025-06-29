@@ -101,3 +101,23 @@ button:hover,
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
+.button-group {
+  display: inline-flex;;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cancel-button {
+  background-color: beige;
+  color: black;
+  border: 1px solid green;
+  padding: 8px 15px;
+  margin-left: 10px;
+}
+.cancel-button:hover {
+  background-color: green;
+  color: white;
+  border: 2px solid white;
+}
