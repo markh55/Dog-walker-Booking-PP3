@@ -2,6 +2,8 @@
 
 {% load i18n %}
 {% load account socialaccount %}
+{% url 'account_signup' as signup_url %}
+
 
 {% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
 
@@ -31,8 +33,12 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+<p>If you have not created an account yet, then please
+  <a href="{% url 'account_signup' %}" class="signup-link">sign up</a> first.</p>
+<p>Otherwise, please sign in below:</p>
+{% endif %}
+
+{% if form.non_field_errors %}
 {% endif %}
 
 <form class="login" method="POST" action="{% url 'account_login' %}">

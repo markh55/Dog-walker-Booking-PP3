@@ -133,3 +133,9 @@ button:hover,
   text-decoration: underline;
 
 }
+
+.signup-link, .signin-link {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
