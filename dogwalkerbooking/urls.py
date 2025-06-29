@@ -22,5 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('bookings/', include('bookings.urls')),
-    path('', bookings_views.home_view, name='home')
+    path('', bookings_views.home_view, name='home'),
+    path('google6cC0gzeNqpXBJv51P3XsFicX5dp3y-gFP6o1kYiEqXU.html', bookings_views.google_verification),
+
+
 ]

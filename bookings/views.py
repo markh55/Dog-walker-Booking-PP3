@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import CreateView
 from .models import Booking
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -20,3 +21,9 @@ class BookingCreateView(CreateView):
     def form_valid(self, form):
         # Additional logic can be added here if needed
         return super().form_valid(form)
+
+
+def google_verification(request):
+    return HttpResponse("google6cC0gzeNqpXBJv51P3XsFicX5dp3y-gFP6o1kYiEqXU.html", content_type="text/html")
+
+
