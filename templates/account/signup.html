@@ -14,7 +14,7 @@
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
 
-/* customer signup form from - https://docs.djangoproject.com/en/5.2/topics/forms/#rendering-fields-manually */
+{# customer signup form from - https://docs.djangoproject.com/en/5.2/topics/forms/#rendering-fields-manually #}
 
   <p>
     {{ form.username.label_tag }}
