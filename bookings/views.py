@@ -24,6 +24,10 @@ class BookingCreateView(CreateView):
 
 
 def google_verification(request):
-    return HttpResponse("google6cC0gzeNqpXBJv51P3XsFicX5dp3y-gFP6o1kYiEqXU.html", content_type="text/html")
+    return HttpResponse(
+    "google-site-verification: google6cC0gzeNqpXBJv51P3XsFicX5dp3y-gFP6o1kYiEqXU.html",
+    content_type="text/plain"
+)
+
 
 
