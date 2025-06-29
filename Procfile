@@ -1,1 +1,1 @@
-web: gunicorn dogwalkerbooking.wsgi
+web: gunicorn dogwalkerbooking.wsgi --log-file -
